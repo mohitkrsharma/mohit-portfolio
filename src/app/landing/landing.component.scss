@@ -1,0 +1,293 @@
+.background-section{
+  background-image: url("../../../src/assets/images/se-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw; /* Ensure full width of the viewport */
+  height: 100vh; /* Ensure full height of the viewport */
+  overflow: hidden; /* Prevent scroll */
+}
+
+.home-ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+}
+
+.card{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-ul li:hover{
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.intro-section{
+  position: absolute;
+  right: 15%;
+  top: 30%;
+}
+
+.intro-line-1,.intro-line-2,.soft-eng{
+  font-size: 46px;
+}
+
+.soft-eng{
+  color: #00eaff;
+  font-weight: 700;
+  animation: fadeEffect 4s infinite;
+}
+
+.about-me-p,.skills-p,.contact-p{
+  width:550px;
+  font-size: 20px;
+  font-weight: 450;
+  word-spacing: 5px;
+  line-height: 30px;
+  animation: fadeEffect 4s ease-out infinite;
+}
+
+.logos-div{
+  display: flex;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+.logos-stack{
+  height: 55px;
+  width: 65px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.social-media,.mobile{
+  margin-top: 20px;
+  display: flex;
+  gap: 50px;
+}
+
+.mobile{
+  gap: 10px !important;
+}
+
+.fa-brands{
+  font-size: 36px;
+}
+
+.fa-brands:hover{
+  cursor: pointer;
+  color: gold;
+}
+
+.fa-solid{
+  font-size: 32px;
+}
+
+.pi-icons{
+  margin-right: 5px;
+}
+
+.resume-link{
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.resume-link:hover{
+  cursor: pointer;
+  color: gold;
+}
+
+.resume{
+  margin-top: 10px;
+}
+
+.mobile-phone{
+  font-size: 20px;
+}
+
+.sidebar-container .sidebar ul li:hover{
+  cursor: pointer;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hide sidebar offscreen */
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar h2 {
+  color: white;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 8px 16px;
+}
+
+.sidebar ul li a {
+  color: #818181;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  cursor: pointer;
+  color: white;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 15px;
+  background: transparent;
+  color: white;
+  border: none;
+  margin: 20px;
+}
+
+.sidebar-container{
+  display: none;
+}
+
+#main {
+  transition: margin-left 0.5s;
+}
+
+/*custom css for sidebar ends*/
+
+@keyframes fadeEffect {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* css media queries for responsiveness*/
+@media screen and (max-width: 980px) {
+  .intro-line-1,.intro-line-2,.soft-eng{
+    font-size: 32px;
+  }
+  .logos-stack {
+    height: 40px;
+    width: 50px;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  .about-me-p,.skills-p,.contact-p {
+    width: 450px;
+    font-size: 20px;
+    font-weight: 450;
+    word-spacing: 5px;
+    line-height: 30px;
+    animation: fadeEffect 4s ease-out infinite;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide sidebar offscreen */
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .sidebar-container{
+    display: block;
+  }
+  .card{
+    display: none;
+  }
+  .sidebar-container .sidebar ul li{
+    margin-bottom: 10px;
+  }
+  .about-me-p,.skills-p,.contact-p{
+    width: 350px;
+    font-size: 14px;
+    font-weight: 450;
+    word-spacing: 5px;
+    line-height: 30px;
+    animation: fadeEffect 4s ease-out infinite;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .intro-line-1,.intro-line-2,.soft-eng{
+    font-size: 16px;
+  }
+
+  .about-me-p,.skills-p,.contact-p{
+    width: 250px;
+    font-size: 14px;
+    font-weight: 450;
+    word-spacing: 5px;
+    line-height: 30px;
+    animation: fadeEffect 4s ease-out infinite;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .fa-brands,.fa-solid, span{
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 720px){
+  .about-me-p,.skills-p,.contact-div{
+    margin-left: 15%;
+  }
+
+  .logos-div{
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    margin-left: 15%;
+  }
+
+  .logos-stack {
+    height: 30px;
+    width: 40px;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  .fa-brand,.fa-solids{
+    font-size: 16px;
+  }
+
+  span{
+    font-size: 16px !important;
+  }
+}

@@ -1,0 +1,71 @@
+<section class="background-section">
+  <div class="card">
+    <ul class="home-ul">
+      <li *ngFor="let item of items" (click)="changeSelection(item)">
+        <i [class]="item.icon" class="pi-icons"></i>{{ item.label }}
+      </li>
+    </ul>
+  </div>
+  <div class="sidebar-container">
+    <div id="sidebar" class="sidebar">
+      <span class="closebtn" (click)="closeSidebar()">&times;</span>
+      <ul>
+        <li *ngFor="let item of items" (click)="changeSelection(item)">
+          <i [class]="item.icon" class="pi-icons"></i>{{ item.label }}
+        </li>
+      </ul>
+    </div>
+    <div id="main">
+      <button class="openbtn" (click)="openSidebar()">☰</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="intro-section">
+      <div class="intro-div" *ngIf="currentSelection === 'Home'">
+        <p class="intro-line-1">Hi! I am Mohit Sharma</p>
+        <span class="intro-line-2">I am a </span><span id="soft-eng" class="soft-eng"
+                                                       #myElement>Software Engineer!</span>
+      </div>
+      <div class="about-me-div" *ngIf="currentSelection === 'About Me'">
+        <p class="about-me-p">
+          I am a dedicated and skilled software engineer with over 4 years of hands-on experience specializing in
+          Angular frontend development.
+          Throughout my career, I have been passionate about crafting robust and scalable web applications that deliver
+          exceptional user experiences.
+        </p>
+      </div>
+      <div class="skills-div" *ngIf="currentSelection === 'Skills'">
+        <p class="skills-p">
+          I possess a strong foundation in web development, proficient in HTML, CSS, JavaScript, and familiar with
+          frameworks like React. Experienced in creating responsive and user-friendly interfaces.
+          My skills includes:
+        </p>
+        <div class="logos-div">
+          <img src="../../assets/images/angular.png" alt="Angular" class="logos-stack">
+          <img src="../../assets/images/html.png" alt="HTML" class="logos-stack">
+          <img src="../../assets/images/css.png" alt="CSS" class="logos-stack">
+          <img src="../../assets/images/javascript.png" alt="JavaScript" class="logos-stack">
+        </div>
+      </div>
+      <div class="contact-div" *ngIf="currentSelection === 'Contact'">
+        <p class="contact-p">
+          You can connect me on below platform:
+        </p>
+        <div class="social-media">
+          <i class="fa-brands fa-instagram" (click)="openSocialMedia('instagram')"></i>
+          <i class="fa-brands fa-facebook" (click)="openSocialMedia('facebook')"></i>
+          <i class="fa-brands fa-linkedin" (click)="openSocialMedia('linkedin')"></i>
+          <i class="fa-brands fa-github" (click)="openSocialMedia('github')"></i>
+        </div>
+        <div class="mobile">
+          <i class="fa-solid fa-phone mobile-phone"></i>
+          <span>+91-7011059726</span>
+        </div>
+        <div class="resume">
+          <span>Please check out my resume: </span>
+          <i class="fa-solid fa-link resume-link" (click)="openPDF()"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
